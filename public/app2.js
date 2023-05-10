@@ -84,8 +84,8 @@ function retraerData(){
         let total = resOpcA + resOpcB
         let APorcen = ((resOpcA/total)*100).toFixed(2)
         let BPorcen = ((resOpcB/total)*100).toFixed(2)
-
-        fetch(`http://localhost:3000/api/put/${arrayPreguntas[contadorPreguntas]._id}`, {
+        
+        fetch(`https://thisorthat-burn.onrender.com/api/put/${arrayPreguntas[contadorPreguntas]._id}`, {
         method: 'PUT',
         headers: {
             'Content-Type': 'application/json'
