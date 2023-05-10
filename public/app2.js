@@ -14,7 +14,7 @@ let laOpcionB = document.getElementById('laOpcionB')
 const botonA = document.getElementById('botonA')
 const botonB = document.getElementById('botonB')
 
-const urlTodasPreguntas = 'http://localhost:3000/api/datos'
+const urlTodasPreguntas = 'https://thisorthat-burn.onrender.com/api/datos'
 
 let contadorPreguntas = 0
 let arrayPreguntas 
