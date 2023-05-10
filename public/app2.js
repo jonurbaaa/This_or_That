@@ -37,7 +37,7 @@ function retraerData(){
           // Ordenar aleatoriamente el array
           arrayPreguntas = arrayPreguntasO.sort(compareRandom);
           
-        console.log(arrayPreguntas.length)
+        
         manejo(contadorPreguntas)
     })
     
@@ -56,8 +56,8 @@ function retraerData(){
             resOpcA = arrayPreguntas[preguntaNum].voto1 // Respuestas A en Base de Datos
             resOpcB = arrayPreguntas[preguntaNum].voto2 // Respuestas B en Base de Datos
             
-            console.log(resOpcA,resOpcB)
-            popUpFinal()
+            
+            
         } else {
             popUpFinal()
             console.log('Se terminó el juego')
@@ -97,13 +97,13 @@ function retraerData(){
     })
     .then(response => response.json())
     .then(data => {
-        console.log('Datos actualizados en la base de datos:', data)
+        //console.log('Datos actualizados en la base de datos:', data)
     })
     .catch(error => {
-        console.error('Error actualizando los datos en la base de datos:', error)
+        // console.error('Error actualizando los datos en la base de datos:', error)
     })
 
-        console.log(`Si:${APorcen}%, No: ${BPorcen}%`)
+        
         PopUps(APorcen,BPorcen)
         
     }
