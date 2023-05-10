@@ -480,8 +480,16 @@ nav img{
         flex-direction: column;
     }
     .divOpciones p{
+        margin: 40px auto 50px auto;
         font-size: 20px;
     }
+    
+#botonA, #botonB{
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform:translateX(-50%)
+}
     .newButton {
         position:absolute;
         bottom: 50%;
