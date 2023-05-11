@@ -547,6 +547,15 @@ nav img{
         margin: 0 auto;
         
     }
+    nav{
+        bottom: 0;
+        padding: 15px;
+    }
+    
+    nav h1{
+        font-size: 1rem;
+    }
+    
     
 }
 
