@@ -6,8 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Abel&family=Bubblegum+Sans&family=Erica+One&family=Oi&family=Rubik:ital,wght@0,700;0,800;1,600&family=Skranji:wght@700&family=Vina+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
-    <title>This or that</title>
+    <title>Esto o lo Otro</title>
 </head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8D8KX9MED1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8D8KX9MED1');
+</script>
 <body>
     <main id="main">
         <div class="preguntaDiv" id="preguntaDiv">
@@ -44,9 +52,19 @@
         <img id="hotdog" src="imagenes/hotdog.gif" alt="">
         <div class="containerInicio" id="containerInicio">
             <h1>This or That</h1>
-            <h3>Elige entre dos opciones, después veras lo que votaron otras personas</h3>
+            <h3>This or That® es un juego de decisiones interesantes para aprender de uno mismo. En cada ronda habra 2 opciones entre las que elegir. Una vez te decidas por una, verás que votaron otros jugadores antes que tú.</h3>
+            
             <button id="botonComienzo">Empezar</button>
         </div>
+    </div>
+    <div class="cookies" id="cookies">
+        <h1>Aviso de Cookies</h1>
+        <p>Este sitio web utiliza cookies para mejorar la funcionalidad y la experiencia del usuario. Utiliza cookies de Google Analytics para medir el tráfico y el comportamiento de los usuarios en nuestro sitio. Al utilizar este sitio web, estás aceptando el uso de cookies. Para más información visita la <a id="linkPrivacidad">pilítica de privacidad</a>.</p>
+        <p id="avisoPrivacidad">
+
+        </p>
+        <button id="aceptarCookies" >Aceptar</button>
+        
     </div>
     <script src="./app2.js"></script>
 </body>
