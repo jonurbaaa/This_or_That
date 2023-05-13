@@ -1,8 +1,9 @@
+const popUpCookies = document.getElementById('cookies')
+const aceptarCookiesBTN = document.getElementById('aceptarCookies')
+const linkPrivacidad = document.getElementById('linkPrivacidad') // link al aviso de privacidad
+const politicaPrivacidad = document.getElementById('avisoPrivacidad') // p donde insertarlo
 const popUpInicio = document.getElementById('popUpInicio')
 const botonComienzo = document.getElementById('botonComienzo')
-botonComienzo.onclick = () =>{
-    popUpInicio.style.display = "none"
-}
 const main = document.getElementById("main")
 const preguntaDiv = document.getElementById('preguntaDiv')
 const containerA = document.querySelector('.containerA')
@@ -14,7 +15,19 @@ let laOpcionB = document.getElementById('laOpcionB')
 const botonA = document.getElementById('botonA')
 const botonB = document.getElementById('botonB')
 
-const urlTodasPreguntas = 'https://thisorthat-burn.onrender.com/api/datos'
+linkPrivacidad.onclick = () =>{
+   politicaPrivacidad.innerText = 'En esta aplicación, se registran la cantidad de votos que reciben cada una de las opciones. No recopilamos ni almacenamos información personal de los usuarios. Además se utiliza Google Analytics, para recopilar información no personal sobre el uso de nuestra aplicación.'
+    popUpCookies.appendChild('newp')
+
+}
+aceptarCookiesBTN.onclick = ()=>{
+    popUpCookies.style.display = "none"
+}
+botonComienzo.onclick = () =>{
+    popUpInicio.style.display = "none"
+}
+
+const urlTodasPreguntas = 'http://localhost:3000/api/datos'
 
 let contadorPreguntas = 0
 let arrayPreguntas 
@@ -37,7 +50,7 @@ function retraerData(){
           // Ordenar aleatoriamente el array
           arrayPreguntas = arrayPreguntasO.sort(compareRandom);
           
-        
+        console.log(arrayPreguntas.length)
         manejo(contadorPreguntas)
     })
     
@@ -56,8 +69,7 @@ function retraerData(){
             resOpcA = arrayPreguntas[preguntaNum].voto1 // Respuestas A en Base de Datos
             resOpcB = arrayPreguntas[preguntaNum].voto2 // Respuestas B en Base de Datos
             
-            
-            
+            console.log(resOpcA,resOpcB)
         } else {
             popUpFinal()
             console.log('Se terminó el juego')
@@ -84,8 +96,8 @@ function retraerData(){
         let total = resOpcA + resOpcB
         let APorcen = ((resOpcA/total)*100).toFixed(2)
         let BPorcen = ((resOpcB/total)*100).toFixed(2)
-        
-        fetch(`https://thisorthat-burn.onrender.com/api/put/${arrayPreguntas[contadorPreguntas]._id}`, {
+
+        fetch(`http://localhost:3000/api/put/${arrayPreguntas[contadorPreguntas]._id}`, {
         method: 'PUT',
         headers: {
             'Content-Type': 'application/json'
@@ -97,13 +109,13 @@ function retraerData(){
     })
     .then(response => response.json())
     .then(data => {
-        //console.log('Datos actualizados en la base de datos:', data)
+        console.log('Datos actualizados en la base de datos:', data)
     })
     .catch(error => {
-        // console.error('Error actualizando los datos en la base de datos:', error)
+        console.error('Error actualizando los datos en la base de datos:', error)
     })
 
-        
+        console.log(`Si:${APorcen}%, No: ${BPorcen}%`)
         PopUps(APorcen,BPorcen)
         
     }
