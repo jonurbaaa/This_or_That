@@ -381,7 +381,18 @@ nav img{
 #hotdog {
    display: none;
   }
-  
+  .cookies{
+    position: absolute;
+    z-index: 100;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 3rem 2rem 1rem 2rem;
+    background-color: #2B3A55;
+    border-radius: 15px;
+    width: 300px;
+    border: 5px solid #1b222e
+}
   .popUpInicio{
     position: absolute;
     z-index: 100;
@@ -400,8 +411,9 @@ nav img{
     position: absolute;
     left: 0%;
     transform: translateX(-50%);
-    margin: 100px auto;
     background-color: #2B3A55;
+    margin: 20px auto;
+    padding: 0rem;
 }
 .containerInicio h1{
     font-family: 'Skranji', cursive;
@@ -428,9 +440,9 @@ nav img{
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
-        padding: 3rem;
+        padding: 20px 30px;
         width: 600px;
-        margin: 100px auto;
+        margin: 20px auto;
         background-color: #2B3A55;
         border-radius: 15px;
     }
@@ -451,6 +463,7 @@ nav img{
         color: #d2d3d7;
         font-family: 'Rubik', sans-serif;
     }
+    
     
     .containerInicio button{
         font-family: 'Rubik', sans-serif;
