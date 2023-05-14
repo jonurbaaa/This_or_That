@@ -15,13 +15,23 @@ let laOpcionB = document.getElementById('laOpcionB')
 const botonA = document.getElementById('botonA')
 const botonB = document.getElementById('botonB')
 
-linkPrivacidad.onclick = () =>{
-   politicaPrivacidad.innerText = 'En esta aplicación, se registran la cantidad de votos que reciben cada una de las opciones. No recopilamos ni almacenamos información personal de los usuarios. Además se utiliza Google Analytics, para recopilar información no personal sobre el uso de nuestra aplicación.'
-    popUpCookies.appendChild('newp')
+// NO se puede clickar nada hasta que no se acepten las cookies
+function inClickable(){
+    console.log('hellooooo')
+    popUpInicio.style.display = 'none'
+    main.style.display = 'none'
+}
+inClickable()
 
+linkPrivacidad.onclick = () =>{
+    politicaPrivacidad.innerText = 'En esta aplicación, se registran la cantidad de votos que reciben cada una de las opciones. No recopilamos ni almacenamos información personal de los usuarios. Además se utiliza Google Analytics, para recopilar información no personal sobre el uso de nuestra aplicación.'
+    popUpCookies.appendChild('newp')
+    
 }
 aceptarCookiesBTN.onclick = ()=>{
     popUpCookies.style.display = "none"
+    popUpInicio.style.display = 'block'
+    main.style.display = 'block'
 }
 botonComienzo.onclick = () =>{
     popUpInicio.style.display = "none"
