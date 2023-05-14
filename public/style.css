@@ -583,7 +583,7 @@ nav img{
     
 #botonA, #botonB{
     position: absolute;
-    bottom: 50%;
+    bottom: 35%;
     left: 50%;
     transform:translateX(-50%)
 }
