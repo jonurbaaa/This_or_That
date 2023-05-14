@@ -13,6 +13,54 @@
 
 
 }
+.cookies{
+    position: absolute;
+    z-index: 100;
+    top: 150px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 4rem 5rem 1rem 5rem;
+    background-color: #2B3A55;
+    border-radius: 15px;
+    width: 500px;
+    border-bottom: 3px solid #1b222e
+}
+.cookies h1{
+    font-family: 'Skranji', cursive;
+    font-weight: 800;
+    color: var(--bodyBackground);
+    margin-bottom: 30px;
+}
+.cookies p{
+    font-size: 1rem;
+    color: #c7c8cb;
+    font-family: 'Rubik', sans-serif;
+    margin-bottom: 50px;
+}
+.cookies p a{
+    color: #68B984;
+}
+.cookies button{
+    font-family: 'Rubik', sans-serif;
+    text-align: center;
+    display: block;
+    margin: 10px auto 20px auto;
+    min-width: 100px;
+    background-color: #111827;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    color: #9bc4a9;
+    cursor: pointer;
+    font-family: "Inter var",ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.5rem;
+    padding: .75rem 1.2rem;
+    text-align: center;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+}
 .popUpInicio{
     position: absolute;
     z-index: 100;
